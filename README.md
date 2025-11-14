@@ -92,6 +92,12 @@ responses = await asyncio.gather(
 
 ## 🔧 Quick Start
 
+### Installation
+```bash
+git clone https://github.com/GYTWorkz-Private-Limited/ParaGen
+cd ParaGen
+pip install -r requirements.txt
+```
 
 ### Configuration
 ```bash
@@ -219,8 +225,8 @@ ParaGen is just the beginning. We're building the future where **every AI intera
 
 ### 1. **Fork & Clone**
 ```bash
-git fork https://github.com/your-org/paragen
-git clone https://github.com/your-username/paragen
+git fork https://github.com/GYTWorkz-Private-Limited/ParaGen
+git clone https://github.com/your-username/ParaGen
 ```
 
 ### 2. **Set Up Development Environment**
@@ -231,36 +237,20 @@ pip install -r requirements-dev.txt
 ```
 
 ### 3. **Pick Your First Issue**
-Check our [Good First Issues](https://github.com/your-org/paragen/labels/good%20first%20issue) or propose your own improvement!
+Check our [Good First Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/labels/good%20first%20issue) or propose your own improvement!
 
 ### 4. **Join Our Community**
-- 💬 [Discord](https://discord.gg/paragen) - Daily discussions
-- 📧 [Mailing List](mailto:community@paragen.ai) - Weekly updates
-- 🐦 [Twitter](https://twitter.com/paragen_ai) - Latest news
+- 🐙 [GitHub Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/issues) - Report bugs and request features
+- 💬 [GitHub Discussions](https://github.com/GYTWorkz-Private-Limited/ParaGen/discussions) - Community discussions
 
----
-
-## 📈 Success Stories
-
-> *"ParaGen reduced our customer support AI response time from 25 seconds to 7 seconds. User satisfaction increased by 40%."*
-> **- TechCorp Customer Success Team**
-
-> *"We integrated ParaGen into our educational platform. Students now get instant, comprehensive explanations instead of waiting 30+ seconds."*
-> **- EduTech Startup CTO**
-
----
-
-## 🎯 Call to Action
 
 **The future of AI is parallel. The future of AI is fast. The future of AI is now.**
 
 **Ready to make every AI interaction lightning-fast?**
 
-### 🚀 **[Start Contributing Today](https://github.com/your-org/paragen/contribute)**
+### 🚀 **[Start Contributing Today](https://github.com/GYTWorkz-Private-Limited/ParaGen)**
 
-### 💡 **[Join Our Discord](https://discord.gg/paragen)**
-
-### ⭐ **[Star Us on GitHub](https://github.com/your-org/paragen)**
+### ⭐ **[Star Us on GitHub](https://github.com/GYTWorkz-Private-Limited/ParaGen)**
 
 ---
 
