@@ -238,6 +238,7 @@ pip install -r requirements-dev.txt
 
 ### 3. **Pick Your First Issue**
 Check our [Good First Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/labels/good%20first%20issue) or propose your own improvement!
+Check our [Good First Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/labels/good%20first%20issue) or propose your own improvement!
 
 ### 4. **Join Our Community**
 - 🐙 [GitHub Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/issues) - Report bugs and request features
