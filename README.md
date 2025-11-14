@@ -231,12 +231,13 @@ git clone https://github.com/your-username/ParaGen
 
 ### 2. **Set Up Development Environment**
 ```bash
-conda create -n paragen python=3.11
+conda create -n paragen python=3.13
 conda activate paragen
 pip install -r requirements-dev.txt
 ```
 
 ### 3. **Pick Your First Issue**
+Check our [Good First Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/labels/good%20first%20issue) or propose your own improvement!
 Check our [Good First Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/labels/good%20first%20issue) or propose your own improvement!
 
 ### 4. **Join Our Community**
