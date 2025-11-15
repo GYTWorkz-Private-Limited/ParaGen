@@ -37,7 +37,9 @@ class QueryClassifier:
             'implementation', 'architecture', 'strategy', 'approach',
             'benefits', 'challenges', 'advantages', 'disadvantages',
             'process', 'steps', 'methodology', 'framework',
-            'best practices', 'considerations', 'factors'
+            'best practices', 'considerations', 'factors',
+            'install', 'installing', 'setup', 'configure', 'guide',
+            'tutorial', 'instructions', 'procedure'
         ]
 
     def classify_query(self, question: str) -> Tuple[QueryType, str]:
@@ -86,9 +88,9 @@ class QueryClassifier:
         if len(question.split('.')) > 2 or len(question.split('?')) > 2:
             complexity_score += 1
         
-        if complexity_score >= 2:
+        if complexity_score >= 1:  # Lowered threshold - if any complexity indicator is found
             return QueryType.COMPLEX_QUERY, f"Complexity score: {complexity_score}"
-        elif word_count > 8:  # Medium length queries
+        elif word_count > 6:  # Lowered length threshold for medium queries
             return QueryType.COMPLEX_QUERY, "Medium-length query, treating as complex"
         else:
             return QueryType.SIMPLE_QUESTION, "Short query without complexity indicators"

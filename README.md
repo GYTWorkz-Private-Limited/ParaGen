@@ -32,44 +32,17 @@ Just as MapReduce transformed big data processing, ParaGen transforms AI generat
 
 ### Traditional vs ParaGen Approach
 
-```
-Traditional Sequential Generation:
-Time = Section₁ + Section₂ + Section₃ + ... + SectionN
-⏱️  20+ seconds for complex queries
-
-ParaGen Parallel Generation:  
-Time = max(Section₁, Section₂, Section₃, ..., SectionN) + overhead
-⏱️  6-12 seconds for the same complexity
-```
+Traditional sequential generation processes sections one by one, taking 20+ seconds for complex queries. ParaGen's parallel approach processes all sections simultaneously, reducing time to 6-12 seconds for the same complexity.
 
 ---
 
 ## 🚀 How ParaGen Works
 
 ### 1. **Intelligent Section Analysis**
-```python
-Question: "Explain microservices architecture"
-↓
-Sections: [
-  "Core Principles & Benefits",
-  "Technical Implementation", 
-  "Deployment Strategies",
-  "Common Challenges",
-  "Best Practices"
-]
-```
+ParaGen analyzes complex questions and breaks them down into logical sections for parallel processing.
 
 ### 2. **Parallel Generation Engine**
-```python
-# Instead of sequential processing...
-response = section1 + section2 + section3 + section4 + section5
-
-# ParaGen processes all sections simultaneously
-responses = await asyncio.gather(
-    generate(section1), generate(section2), generate(section3),
-    generate(section4), generate(section5)
-)
-```
+Instead of sequential processing, ParaGen processes all sections simultaneously using asynchronous parallel execution.
 
 ### 3. **Smart Assembly**
 - Context-aware section ordering
@@ -92,36 +65,10 @@ responses = await asyncio.gather(
 
 ## 🔧 Quick Start
 
-### Installation
-```bash
-git clone https://github.com/GYTWorkz-Private-Limited/ParaGen
-cd ParaGen
-pip install -r requirements.txt
-```
-
-### Configuration
-```bash
-# Add your LLM credentials to .env
-AZURE_OPENAI_API_KEY=your_key_here
-AZURE_OPENAI_ENDPOINT=your_endpoint_here
-```
-
-### Run ParaGen
-```bash
-python main.py
-# API available at http://localhost:8000
-```
-
-### Test the Speed
-```python
-import requests
-
-response = requests.post("http://localhost:8000/api/v1/compare/performance", 
-    json={"question": "Explain cloud computing architecture"})
-
-print(f"🚀 Speedup achieved: {response.json()['analysis']['summary']['speedup_factor']}x")
-print(f"⏱️  Time saved: {response.json()['analysis']['summary']['time_saved_seconds']} seconds")
-```
+1. **Installation**: Clone the repository and install dependencies
+2. **Configuration**: Create a `.env` file with your Azure OpenAI credentials (API key, endpoint, and model name)
+3. **Run**: Start ParaGen and access the API at localhost:8000
+4. **Test**: Use the performance comparison API to see the speedup achieved
 
 ---
 
@@ -129,12 +76,12 @@ print(f"⏱️  Time saved: {response.json()['analysis']['summary']['time_saved_
 
 ### Phase 1: Foundation ✅
 - [x] Core parallel generation engine
-- [x] Azure OpenAI integration
+- [x] OpenAI integration
 - [x] Performance benchmarking
 - [x] REST API framework
 
 ### Phase 2: LLM Agnostic Platform 🔄
-- [ ] **OpenAI API support**
+- [x] **OpenAI API support**
 - [ ] **Anthropic Claude integration**
 - [ ] **Google Gemini compatibility**
 - [ ] **Local model support** (Ollama, vLLM)
@@ -180,11 +127,6 @@ ParaGen is just the beginning. We're building the future where **every AI intera
 - Optimize async processing pipelines
 - Build monitoring and debugging tools
 
-#### 🎨 **Product & UX**
-- Design intuitive interfaces
-- Improve developer experience
-- Create compelling demos and use cases
-
 #### 📊 **Data & ML Engineers**
 - Benchmark different models and providers
 - Optimize prompt engineering strategies
@@ -224,17 +166,10 @@ ParaGen is just the beginning. We're building the future where **every AI intera
 ## 🌟 Get Started Contributing
 
 ### 1. **Fork & Clone**
-```bash
-git fork https://github.com/GYTWorkz-Private-Limited/ParaGen
-git clone https://github.com/your-username/ParaGen
-```
+Fork the repository on GitHub and clone your fork locally.
 
 ### 2. **Set Up Development Environment**
-```bash
-conda create -n paragen python=3.13
-conda activate paragen
-pip install -r requirements-dev.txt
-```
+Create a conda environment with Python 3.13 and install development dependencies.
 
 ### 3. **Pick Your First Issue**
 Check our [Good First Issues](https://github.com/GYTWorkz-Private-Limited/ParaGen/labels/good%20first%20issue) or propose your own improvement!

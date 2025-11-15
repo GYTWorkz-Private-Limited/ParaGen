@@ -2,7 +2,7 @@ import asyncio
 import time
 from typing import List
 from models.schemas import SectionInfo, GeneratedSection, ParallelResponse
-from services.azure_client import azure_client
+from services.openai_client import get_openai_client
 from services.section_identifier import section_identifier
 from prompts.advanced_prompts import get_section_prompt
 from datetime import datetime
@@ -27,7 +27,7 @@ class ParallelGenerator:
         )
         
         try:
-            content = await azure_client.generate_completion(
+            content = await get_openai_client().generate_completion(
                 prompt=prompt,
                 max_tokens=min(section.section_content_size_in_words * 2, 1500),
                 temperature=0.7

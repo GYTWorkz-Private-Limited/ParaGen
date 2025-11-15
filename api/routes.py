@@ -37,33 +37,8 @@ async def generate_sequential_response(request: LLMRequest):
 async def generate_parallel_response(request: LLMRequest):
     """Generate response using parallel section-based approach"""
     try:
-        # Check if parallel generation is worth it for this query
-        if not query_classifier.should_use_parallel_generation(request.question):
-            # For simple queries, return a "parallel" response with single section
-            sequential_response = await generate_sequential_response(request)
-            
-            # Convert to parallel format for consistency
-            from models.schemas import GeneratedSection, ParallelResponse
-            from datetime import datetime
-            
-            single_section = GeneratedSection(
-                heading="Response",
-                content=sequential_response.answer,
-                word_count=sequential_response.word_count,
-                generation_time_ms=sequential_response.generation_time_ms
-            )
-            
-            return ParallelResponse(
-                answer=sequential_response.answer,
-                sections=[single_section],
-                total_generation_time_ms=sequential_response.generation_time_ms,
-                section_identification_time_ms=0.0,
-                parallel_generation_time_ms=sequential_response.generation_time_ms,
-                word_count=sequential_response.word_count,
-                timestamp=datetime.now()
-            )
-        
-        # Use parallel generation for complex queries
+        # Always use parallel generation when this endpoint is called
+        # This is the core feature of ParaGen - let users decide when to use it
         response = await parallel_generator.generate_parallel_response(request.question)
         return response
     except Exception as e:

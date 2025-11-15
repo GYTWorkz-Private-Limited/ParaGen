@@ -1,6 +1,6 @@
 import time
 from models.schemas import SequentialResponse
-from services.azure_client import azure_client
+from services.openai_client import get_openai_client
 from prompts.section_prompts import SEQUENTIAL_GENERATION_PROMPT
 from datetime import datetime
 
@@ -15,7 +15,7 @@ class SequentialGenerator:
         prompt = SEQUENTIAL_GENERATION_PROMPT.format(question=question)
         
         try:
-            content = await azure_client.generate_completion(
+            content = await get_openai_client().generate_completion(
                 prompt=prompt,
                 max_tokens=2000,
                 temperature=0.7

@@ -2,7 +2,7 @@ import csv
 import io
 import time
 from models.schemas import SectionInfo, SectionIdentificationResponse
-from services.azure_client import azure_client
+from services.openai_client import get_openai_client
 from prompts.section_prompts import SECTION_IDENTIFICATION_PROMPT
 
 class SectionIdentifier:
@@ -18,7 +18,7 @@ class SectionIdentifier:
         prompt = SECTION_IDENTIFICATION_PROMPT.format(question=question)
         
         try:
-            response = await azure_client.generate_completion(
+            response = await get_openai_client().generate_completion(
                 prompt=prompt,
                 max_tokens=800,
                 temperature=0.3
